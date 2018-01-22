@@ -21,3 +21,17 @@ body {
    height:70px;   /* Height of the footer */
    background:#6cf;
 }
+
+#nav-main > .container {
+    @media (min-width: 1200px) {
+        max-width: 1350px;
+    }
+}
+
+#header {
+    height: 48px;
+
+    @media (min-width: 992px) {
+        height: 58px;
+    }
+}

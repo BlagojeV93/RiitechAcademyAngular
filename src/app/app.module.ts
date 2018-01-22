@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     NavComponent,
     FooterComponent,
     CoursesComponent,
-    CarouselComponent
+    CarouselComponent,
+    CourseCardComponent
   ],
   imports: [
     BrowserModule,

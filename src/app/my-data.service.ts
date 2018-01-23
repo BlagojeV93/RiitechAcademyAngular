@@ -10,15 +10,10 @@ import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class MyDataService {
-  private courses: Course[] = []; 
-  
+
   constructor(private http: Http) { }
 
-  getCourses(): Observable<Course[]> {
-    return this.fetchData();
-  }
-
-  fetchData() {
+  getCourses() {
     return this.http.get('https://api.myjson.com/bins/1gzowx').map(
       (response) => response.json()
     )

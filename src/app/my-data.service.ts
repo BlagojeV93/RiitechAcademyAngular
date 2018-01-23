@@ -14,7 +14,7 @@ export class MyDataService {
   constructor(private http: Http) { }
 
   getCourses() {
-    return this.http.get('https://api.myjson.com/bins/1gzowx').map(
+    return this.http.get('http://192.168.0.13:3000/v1/courses').map(
       (response) => response.json()
     )
   }

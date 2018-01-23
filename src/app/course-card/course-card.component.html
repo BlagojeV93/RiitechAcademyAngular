@@ -23,7 +23,7 @@
             </div>
         </div>
         <footer class="course-footer">
-            <a routerLink="/course-details" class="btn btn-details">Details</a>
+            <a [routerLink]="['/course-details']" [queryParams]="{ id : course._id }" class="btn btn-details">Details</a>
             <div class="tags">
                 <span class="tag">#Beginner</span>
                 <span class="tag">#Front-end</span>
@@ -31,3 +31,4 @@
         </footer>
     </div>
   </div>
+

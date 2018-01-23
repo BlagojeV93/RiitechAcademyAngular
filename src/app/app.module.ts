@@ -11,6 +11,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 
+import { HttpModule } from '@angular/http';
+import { MyDataService } from './my-data.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [MyDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MyDataService } from '../my-data.service';
-import { Course } from '../shared/courses.model';
 
 @Component({
   selector: 'app-course-card',
@@ -8,7 +7,7 @@ import { Course } from '../shared/courses.model';
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent implements OnInit {
-  courses: Course[];
+  courses = [];
   constructor(private newService: MyDataService){}
 
   ngOnInit() {

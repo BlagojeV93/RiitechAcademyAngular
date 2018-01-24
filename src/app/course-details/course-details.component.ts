@@ -29,7 +29,7 @@ export class CourseDetailsComponent implements OnInit {
       return this.http.get(this.jsonUrl).map(
         (response) => response.json()
       ).subscribe(
-        (data) => { this.courseDetails = data; console.log(this.courseDetails); this.students = this.courseDetails.students; console.log(this.students) }
+        // (data) => { this.courseDetails = data; console.log(this.courseDetails); this.students = this.courseDetails.students; console.log(this.students) }
       )
     } 
 }

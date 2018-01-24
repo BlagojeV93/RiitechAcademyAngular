@@ -13,6 +13,9 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 
 import { HttpModule } from '@angular/http';
 import { MyDataService } from './my-data.service';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { MyDataService } from './my-data.service';
     CoursesComponent,
     CarouselComponent,
     CourseCardComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [MyDataService],
   bootstrap: [AppComponent]

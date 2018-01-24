@@ -1,0 +1,23 @@
+<div class="form-position">
+  <div id="LoginForm" class="module form-module login-register-form">
+    <div class="toggle">
+      <i class="fa fa-times fa-pencil switch"></i>
+    </div>
+
+    <div id="SignupForm" class="form">
+      <h2>Create an account</h2>
+      <form>
+        <input [(ngModel)]="username" name="username" type="text" placeholder="Username" />
+        <input [(ngModel)]="password" name="password" type="password" placeholder="Password" />
+        <input [(ngModel)]="email" name="email" type="email" placeholder="Email Address" />
+        <button (click)="signup()" class="btn-login_register">Signup</button>
+      </form>
+    </div>
+    <div class="cta hvr-overline-reveal">
+
+      <hr class="line">
+      <a routerLink="/login" class="btn-new-account" href="#">Already have an account?</a>
+
+    </div>
+  </div>
+</div>

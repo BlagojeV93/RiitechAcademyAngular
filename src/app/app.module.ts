@@ -12,7 +12,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 
 import { HttpModule } from '@angular/http';
-import { MyDataService } from './my-data.service';
+import { CoursesService } from './services/courses.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { MyDataService } from './my-data.service';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [MyDataService],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

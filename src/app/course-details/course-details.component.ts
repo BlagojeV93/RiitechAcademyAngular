@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { CoursesService } from '../services/courses.service';
 
 @Component({
@@ -9,14 +7,14 @@ import { CoursesService } from '../services/courses.service';
   styleUrls: ['./course-details.component.scss']
 })
 export class CourseDetailsComponent implements OnInit {
-  courseDetails = {};
-  constructor(private coursesService: CoursesService, private http: Http) { }
+  courseDetails = [];
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
     this.getCourseDetails();
   }
 
-  getCourseDetails() {
+  getCourseDetails(): void {
     this.coursesService.getCourseDetails()
       .subscribe(course => this.courseDetails = course);
   }

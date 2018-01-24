@@ -10,9 +10,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 @Injectable()
 export class CoursesService {
 
-  constructor(private http: Http, private route: ActivatedRoute) { }
-
-  /*** All Courses ***/
+  constructor(private http: Http, private route: ActivatedRoute) {}
 
   getAllCourses(): Observable<any[]> {
     return this.fetchData('http://192.168.0.13:3000/v1/courses/');
@@ -28,9 +26,7 @@ export class CoursesService {
   }  
 
   fetchData(jsonUrl: string) {
-    return this.http.get(jsonUrl).map(
-      (response) => response.json()
-    )
+    return this.http.get(jsonUrl).map(res => res.json());
   }
 
 }

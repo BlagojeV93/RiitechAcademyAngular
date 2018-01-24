@@ -10,7 +10,6 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CourseDetailsComponent implements OnInit {
   courseDetails = {};
-  jsonUrl = '';
   constructor(private coursesService: CoursesService, private http: Http) { }
 
   ngOnInit() {

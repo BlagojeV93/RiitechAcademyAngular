@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
-import { Course } from '../shared/courses.model';
 
 @Component({
   selector: 'app-course-card',
@@ -17,6 +16,6 @@ export class CourseCardComponent implements OnInit {
 
   getAllCourses(): void {
     this.coursesService.getAllCourses()
-        .subscribe(courses => this.courses = courses);
+      .subscribe(courses => this.courses = courses);
   }
 }

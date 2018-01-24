@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Response } from '@angular/http/src/static_response';
-import { Course } from '../shared/courses.model';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
@@ -15,11 +14,11 @@ export class CoursesService {
 
   /*** All Courses ***/
 
-  getAllCourses(): Observable<Course[]> {
+  getAllCourses(): Observable<any[]> {
     return this.fetchData('http://192.168.0.13:3000/v1/courses/');
   }
 
-  getCourseDetails() {
+  getCourseDetails(): Observable<any[]> {
     return this.fetchData(this.getJson());
   }
   

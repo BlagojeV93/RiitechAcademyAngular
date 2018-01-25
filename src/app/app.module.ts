@@ -14,6 +14,8 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { StudentViewsComponent } from './student-views/student-views.component';
+import { StudentEditComponent } from './student-edit/student-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { CoursesService } from './services/courses.service';
     CourseDetailsComponent,
     LoginComponent,
     SignupComponent,
+    StudentViewsComponent,
+    StudentEditComponent,
     
   ],
   imports: [

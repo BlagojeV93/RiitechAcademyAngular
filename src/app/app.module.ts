@@ -9,11 +9,11 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { HttpModule } from '@angular/http';
-import { MyDataService } from './my-data.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { CoursesService } from './services/courses.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [MyDataService],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

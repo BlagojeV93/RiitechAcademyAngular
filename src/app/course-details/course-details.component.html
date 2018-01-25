@@ -5,48 +5,29 @@
       <div class="course course-type-html">
         <div class="course-card">
           <header class="course-header container-fluid">
-          
-            <h2 class="text-center m-0 py-1 d-none d-sm-none d-md-block">HTML5</h2>
-        
+            <h2 class="text-center m-0 py-1 d-none d-sm-none d-md-block">{{courseDetails.name}}</h2>
           </header>
 
-          <h2 class="text-center m-0 py-1 d-md-none">HTML5</h2>
+          <h2 class="text-center m-0 py-1 d-md-none">{{courseDetails.name ? courseDetails.name : ''}}</h2>
           <div class="row course-card-body">
             <div class="col-lg-6 course-logo">
-              <img src="img/html5.svg" class="py-3" />
+              <img [src]="courseDetails.image ? courseDetails.image : ''" class="py-3" />
 
               <div class="studentList">
                 <span>Students on this course:</span>
                 <div class="course-student-list-info">
                   <ol>
-                    <li>Student1</li>
-                    <li>Student2</li>
-                    <li>Student3</li>
-                    <li>Student1</li>
-                    <li>Student2</li>
-                    <li>Student3</li>
-
+                    <li *ngFor="let student of courseDetails.students">{{student.data.username}}</li>
                   </ol>
                 </div>
               </div>
             </div>
             <div class="col-lg-6 course-description">
               <span>Course Info</span>
-              <p class="text-justify paddingParagraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum.</p>
+              <p class="text-justify paddingParagraph">{{courseDetails.description ? courseDetails.description : ''}}</p>
               <div class="row courseTeacherText">
                 <span>Teacher:</span>
-                <p class="marginParagraphCancel">Sujdo</p>
+                <p class="marginParagraphCancel">{{courseDetails.teacher ? courseDetails.teacher.username : ''}}</p>
               </div>
               <div class="row courseTeacherText">
                 <span>Start Date:</span>

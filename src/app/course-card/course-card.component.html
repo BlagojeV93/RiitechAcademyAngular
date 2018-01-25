@@ -16,7 +16,7 @@
         </a>
             <div class="row course-card-body">
             <div class="col-lg-6 course-logo">
-                <img [src]="course.image" class="py-3" />
+                <img [src]="course.image ? course.image : ''" class="py-3" />
             </div>
             <div class="col-lg-6 course-description courseDescMain">
                 <p class="text-justify">{{ course.description }}</p>

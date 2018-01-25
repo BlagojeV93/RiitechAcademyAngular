@@ -3,7 +3,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Response } from '@angular/http/src/static_response';
 
-import { Course } from './shared/courses.model';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';

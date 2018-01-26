@@ -14,7 +14,7 @@ import { UserEditComponent } from './admin-views/user-edit/user-edit.component';
 import { CarouselNewComponent } from './admin-views/carousel-new/carousel-new.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/admin', pathMatch: 'full' },
+  { path: '', redirectTo: '/courses', pathMatch: 'full' },
   { path: 'courses', component: CoursesComponent },
   { path: 'course-details', component: CourseDetailsComponent },
   { path: 'login', component: LoginComponent },

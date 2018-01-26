@@ -25,6 +25,7 @@ test() {
   constructor(private http: Http) { }
 
   ngOnInit() {
+    
   }
 
 }

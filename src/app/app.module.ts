@@ -14,6 +14,15 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { AdminComponent } from './admin-views/admin/admin.component';
+import { AdminUsersComponent } from './admin-views/admin-users/admin-users.component';
+import { AdminCoursesComponent } from './admin-views/admin-courses/admin-courses.component';
+import { AdminCarouselComponent } from './admin-views/admin-carousel/admin-carousel.component';
+import { UserEditComponent } from './admin-views/user-edit/user-edit.component';
+import { CoursesEditComponent } from './admin-views/courses-edit/courses-edit.component';
+import { CoursesNewComponent } from './admin-views/courses-new/courses-new.component';
+import { CarouselNewComponent } from './admin-views/carousel-new/carousel-new.component';
+import { AdminService } from './services/admin.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +35,14 @@ import { CoursesService } from './services/courses.service';
     CourseDetailsComponent,
     LoginComponent,
     SignupComponent,
+    AdminComponent,
+    AdminUsersComponent,
+    AdminCoursesComponent,
+    AdminCarouselComponent,
+    UserEditComponent,
+    CoursesEditComponent,
+    CoursesNewComponent,
+    CarouselNewComponent,
     
   ],
   imports: [
@@ -35,7 +52,10 @@ import { CoursesService } from './services/courses.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [CoursesService],
+  providers: [
+    CoursesService,
+    AdminService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

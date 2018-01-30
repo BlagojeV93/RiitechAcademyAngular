@@ -14,6 +14,10 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { TeacherProfileComponent } from './TeacherViews/teacher-profile/teacher-profile.component';
+import { EditCourseComponent } from './TeacherViews/edit-course/edit-course.component';
+import { EditProfileComponent } from './TeacherViews/edit-profile/edit-profile.component';
+import { TeacherProfileService } from './services/teacher-profile.service'; 
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { CoursesService } from './services/courses.service';
     CourseDetailsComponent,
     LoginComponent,
     SignupComponent,
+    TeacherProfileComponent,
+    EditCourseComponent,
+    EditProfileComponent,
     
   ],
   imports: [
@@ -35,7 +42,10 @@ import { CoursesService } from './services/courses.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [CoursesService],
+  providers: [
+    CoursesService,
+    TeacherProfileService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -27,6 +27,7 @@ login() {
         this.tokenParam =  data;
         this.authService.AccesToken=this.tokenParam.token;
         this.router.navigate(['courses']);
+        console.log(this.tokenParam);
       }
     );
   }

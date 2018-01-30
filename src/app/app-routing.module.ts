@@ -4,11 +4,9 @@ import { CoursesComponent } from  './courses/courses.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-<<<<<<< HEAD
 import { TeacherProfileComponent } from './TeacherViews/teacher-profile/teacher-profile.component';
 import { EditCourseComponent } from './TeacherViews/edit-course/edit-course.component';
 import { EditProfileComponent } from './TeacherViews/edit-profile/edit-profile.component';
-=======
 import { AdminComponent } from './admin-views/admin/admin.component';
 import { AdminCarouselComponent } from './admin-views/admin-carousel/admin-carousel.component';
 import { AdminCoursesComponent } from './admin-views/admin-courses/admin-courses.component'
@@ -17,7 +15,6 @@ import { CoursesNewComponent } from './admin-views/courses-new/courses-new.compo
 import { CoursesEditComponent } from './admin-views/courses-edit/courses-edit.component';
 import { UserEditComponent } from './admin-views/user-edit/user-edit.component';
 import { CarouselNewComponent } from './admin-views/carousel-new/carousel-new.component';
->>>>>>> upstream/development
 
 const routes: Routes = [
   { path: '', redirectTo: '/courses', pathMatch: 'full' },
@@ -25,11 +22,9 @@ const routes: Routes = [
   { path: 'course-details', component: CourseDetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-<<<<<<< HEAD
   { path: 'teacher-profile', component: TeacherProfileComponent },
   { path: 'teacher-edit-course', component: EditCourseComponent },
   { path: 'teacher-edit-profile', component: EditProfileComponent },
-=======
   { path: 'admin', component: AdminComponent },
   { path: 'admin/courses', component: AdminCoursesComponent },
   { path: 'admin/users', component: AdminUsersComponent },
@@ -38,7 +33,6 @@ const routes: Routes = [
   { path: 'admin/courses/edit', component: CoursesEditComponent },
   { path: 'admin/users/edit', component: UserEditComponent },
   { path: 'admin/carousel/new', component: CarouselNewComponent }
->>>>>>> upstream/development
 ];
 
 

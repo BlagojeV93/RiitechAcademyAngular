@@ -1,0 +1,24 @@
+<main id="body" class="container">
+    
+  <div class="buttondiv">
+      <a href='/admin/carousel/new' class="btn btn-success dugme">Add a new Image</a>
+
+      
+  </div>
+
+ 
+
+  <div class="carouselItem container">
+
+      <img class="img-fluid" src="data:<%= c.contentType %>;base64, <%= c.picture %>">
+
+
+      <form action='/admin/carousel/delete/<%= c.id %>?_method=DELETE' method='POST' >
+          <div class="DeleteButtonDiv">
+      <input type="submit" value="Delete" class="btn btn-danger buttonDelete">
+  </div>
+  </form>
+  </div>
+  
+
+</main>

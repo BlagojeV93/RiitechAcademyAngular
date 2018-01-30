@@ -1,0 +1,34 @@
+
+<main id="body" class="container">
+    <div class="adminCourseCreateNewDiv">
+       
+    <a [routerLink]="['/courses/new']" class='btn btn-success adminCourseCreateNew'>Create a new course</a>
+    
+</div>
+    <table id='kursevi' class="display" cellspacing="1" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Teacher</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let course of adminCourses">
+            <td>{{course.name ? course.name : ''}}</td>
+            <td>{{course.code ? course.code : ''}}</td>
+            <td><img [src]="course.image ? course.image : ''" width='100px' height='50px' /></td>
+            <td>{{course.description | slice:0:50}}</td>
+            <td>{{course.teacher.username ? course.teacher.username : ''}}</td>
+            <td><input type="submit" value="Edit" class="btn btn-sm btn-info" [routerLink]="['/admin/courses/edit']"></td>
+            <td><input type="submit" value="Delete" class="btn btn-sm btn-danger"></td>
+        </tr>
+        
+    </tbody>
+</table>
+</main>

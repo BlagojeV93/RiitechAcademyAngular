@@ -18,6 +18,15 @@ import { TeacherProfileComponent } from './TeacherViews/teacher-profile/teacher-
 import { EditCourseComponent } from './TeacherViews/edit-course/edit-course.component';
 import { EditProfileComponent } from './TeacherViews/edit-profile/edit-profile.component';
 import { TeacherProfileService } from './services/teacher-profile.service'; 
+import { AdminComponent } from './admin-views/admin/admin.component';
+import { AdminUsersComponent } from './admin-views/admin-users/admin-users.component';
+import { AdminCoursesComponent } from './admin-views/admin-courses/admin-courses.component';
+import { AdminCarouselComponent } from './admin-views/admin-carousel/admin-carousel.component';
+import { UserEditComponent } from './admin-views/user-edit/user-edit.component';
+import { CoursesEditComponent } from './admin-views/courses-edit/courses-edit.component';
+import { CoursesNewComponent } from './admin-views/courses-new/courses-new.component';
+import { CarouselNewComponent } from './admin-views/carousel-new/carousel-new.component';
+import { AdminService } from './services/admin.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +42,14 @@ import { TeacherProfileService } from './services/teacher-profile.service';
     TeacherProfileComponent,
     EditCourseComponent,
     EditProfileComponent,
+    AdminComponent,
+    AdminUsersComponent,
+    AdminCoursesComponent,
+    AdminCarouselComponent,
+    UserEditComponent,
+    CoursesEditComponent,
+    CoursesNewComponent,
+    CarouselNewComponent,
     
   ],
   imports: [
@@ -44,7 +61,8 @@ import { TeacherProfileService } from './services/teacher-profile.service';
   ],
   providers: [
     CoursesService,
-    TeacherProfileService
+    TeacherProfileService,
+    AdminService
   ],
   bootstrap: [AppComponent]
 })

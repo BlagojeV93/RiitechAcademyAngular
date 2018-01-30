@@ -51,15 +51,19 @@
 .nav-divider {
     width: 100%;
 }
+.riitech-brand {
+    height: 50px;
+}
 
 .dropdown {
     color: $color-nav-links;
 }
 .navigation {
     background-color: $color-primary;
+    box-shadow: 0px 0px 30px 5px #9E9E9E;
     
     .nav-link, .navbar-brand, .dropdown-item {
-        color: $color-nav-links;
+        color: $color-nav-links !important;
     }
     
     .language {

@@ -4,7 +4,8 @@
     display: flex;
     align-items: center;
     background-color: $color-primary;
-    color: white;
+    color: #007b90;
+    box-shadow: 0px 0px 30px 5px #BDBDBD;
 }
 
 .social-networks {
@@ -18,11 +19,18 @@
     font-size: 1.5em;
     margin-right: 15px;
     color: #fff;
+    
 }
-
+.social-icon {
+    width: 30px;
+}
+.social-icon:hover {
+    width: 35px;
+   
+}
 .about-link {
     font-size: 0.9em;
-    color: #fff!important;
+    color: #007b90!important;
     text-decoration: none!important;
 }
 

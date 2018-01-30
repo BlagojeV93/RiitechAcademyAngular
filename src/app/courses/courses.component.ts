@@ -7,10 +7,6 @@ import { AuthService } from '../auth.service';
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss'],
-  template:`Display Data :
-    <br>
-    Your Token is  : {{displaytoken}}
-  `
 })
 export class CoursesComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService){}

@@ -8,12 +8,13 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
-import { HttpModule } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { AuthService  }  from './auth.service';
 import { TeacherProfileComponent } from './TeacherViews/teacher-profile/teacher-profile.component';
 import { EditCourseComponent } from './TeacherViews/edit-course/edit-course.component';
 import { EditProfileComponent } from './TeacherViews/edit-profile/edit-profile.component';
@@ -60,7 +61,8 @@ import { AdminService } from './services/admin.service';
     HttpClientModule
   ],
   providers: [
-    CoursesService,
+    CoursesService, 
+    AuthService,
     TeacherProfileService,
     AdminService
   ],

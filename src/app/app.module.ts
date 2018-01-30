@@ -14,6 +14,10 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { TeacherProfileComponent } from './TeacherViews/teacher-profile/teacher-profile.component';
+import { EditCourseComponent } from './TeacherViews/edit-course/edit-course.component';
+import { EditProfileComponent } from './TeacherViews/edit-profile/edit-profile.component';
+import { TeacherProfileService } from './services/teacher-profile.service'; 
 import { AdminComponent } from './admin-views/admin/admin.component';
 import { AdminUsersComponent } from './admin-views/admin-users/admin-users.component';
 import { AdminCoursesComponent } from './admin-views/admin-courses/admin-courses.component';
@@ -35,6 +39,9 @@ import { AdminService } from './services/admin.service';
     CourseDetailsComponent,
     LoginComponent,
     SignupComponent,
+    TeacherProfileComponent,
+    EditCourseComponent,
+    EditProfileComponent,
     AdminComponent,
     AdminUsersComponent,
     AdminCoursesComponent,
@@ -54,6 +61,7 @@ import { AdminService } from './services/admin.service';
   ],
   providers: [
     CoursesService,
+    TeacherProfileService,
     AdminService
   ],
   bootstrap: [AppComponent]

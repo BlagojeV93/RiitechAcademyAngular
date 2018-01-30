@@ -8,12 +8,13 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
-import { HttpModule } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CoursesService } from './services/courses.service';
+import { AuthService  }  from './auth.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { CoursesService } from './services/courses.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [CoursesService],
+  providers: [CoursesService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
